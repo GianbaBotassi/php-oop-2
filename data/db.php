@@ -1,65 +1,84 @@
 <?php
 
+require_once("./models/category.php");
+require_once("./models/products.php");
+require_once("./models/typology.php");
+
+
 $products = [
   "dogs" => [
     "food" => [
-      "crocsMaki" => [
+      (object) [
         "name" => "crocsMaki",
-        "description" => "van bene per tutto",
-        "price" => 20
-      ],
-      "crocsArya" => [
-        "name" => "crocsArya",
-        "description" => "solo cani grossa taglia",
-        "price" => 50
+        "price" => "20",
+        "icon" => "iconaCane",
+        "img" => "crocsDogs.jpg",
+        "typology" => "food",
+        "category" => "dogs"
       ]
     ],
     "toy" => [
-      "giocoMaki" => [
-        "name" => "giocoMaki",
-        "description" => "ossicino",
-        "price" => 5
-      ],
-      "giocoArya" => [
-        "name" => "giocoArya",
-        "description" => "Osso GIGANTEEEEE",
-        "price" => 10
+      (object) [
+        "name" => "toyMaki",
+        "price" => "12",
+        "icon" => "iconaCane",
+        "img" => "toyDogs.jpg",
+        "typology" => "toy",
+        "category" => "dogs"
       ]
     ],
     "cuccia" => [
-      "cucciaMaki" => [
-        "name" => "cucciaMaki",
-        "description" => "cuccia minuscola",
-        "price" => 35
-      ],
-      "cucciaArya" => [
-        "name" => "cucciaArya",
-        "description" => "cuccia come una casa",
-        "price" => 70
+      (object) [
+        "name" => "crocsMaki",
+        "price" => "20",
+        "icon" => "iconaCane",
+        "img" => "cucciaDogs.jpg",
+        "typology" => "cuccia",
+        "category" => "dogs"
       ]
     ]
   ],
   "cats" => [
     "food" => [
-      "croccheUtah" => [
-        "name" => "croccheUtah",
-        "description" => "mini crocchine gatto",
-        "price" => 15
+      (object) [
+        "name" => "crocsMaki",
+        "price" => "20",
+        "icon" => "iconaGatto",
+        "img" => "crocsCats.jpg",
+        "typology" => "food",
+        "category" => "dogs"
       ]
     ],
     "toy" => [
-      "giocoUtah" => [
-        "name" => "giocoUtah",
-        "description" => "tiragraffi",
-        "price" => 66
+      (object) [
+        "name" => "crocsMaki",
+        "price" => "20",
+        "icon" => "iconaGatto",
+        "img" => "toyCats.jpg",
+        "typology" => "toy",
+        "category" => "dogs"
       ]
     ],
     "cuccia" => [
-      "cucciaUtah" => [
-        "name" => "cucciaUtah",
-        "description" => "cuccia sul divano e letto",
-        "price" => 22
+      (object) [
+        "name" => "crocsMaki",
+        "price" => "20",
+        "icon" => "iconaGatto",
+        "img" => "cucciaCats.jpg",
+        "typology" => "cuccia",
+        "category" => "dogs"
       ]
     ]
   ]
 ];
+
+$dogsIcon = "iconaCane";
+$catsIcon = "iconaGatto";
+
+
+
+
+
+
+$products["dogs"]["food"][] = new Typology("Crocchettine Arya", 99, "Immagine", "CANI", $dogsIcon, "CIBO");
+// $products["dogs"]["food"][] = new Food("Crocchette Maki", 20, "Icona", "immagine", "Cibo", "Cani");
