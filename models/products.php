@@ -1,20 +1,20 @@
 <?php
 
-class Product extends Category
+class Product
 {
 
   private $name;
   private $price;
   private $img;
+  private $icon;
 
-  public function __construct($name, $price, $img, $category, $icon)
+  public function __construct($name, $price, $img, Category $icon)
   {
-
-    parent::__construct($category, $icon);
 
     $this->name = $name;
     $this->price = $price;
     $this->img = $img;
+    $this->icon = $icon;
   }
 
 
