@@ -6,10 +6,10 @@ class Food extends Product
   private $item;
   private $expirDate;
 
-  public function __construct($name, $price, $img, $icon, $item, $expirDate)
+  public function __construct($name, $price, $img, $icon, $item, $expirDate, $color)
   {
 
-    parent::__construct($name, $price, $img, $icon);
+    parent::__construct($name, $price, $img, $icon, $color);
 
     $this->item = $item;
     $this->expirDate = $expirDate;

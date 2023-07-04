@@ -1,20 +1,24 @@
 <?php
 
+require_once("color.php");
 class Product
 {
+
+  use Colorable;
 
   private $name;
   private $price;
   private $img;
   private Category $category;
 
-  public function __construct($name, $price, $img, Category $category)
+  public function __construct($name, $price, $img, Category $category, $color)
   {
 
     $this->setName($name);
     $this->setPrice($price);
     $this->setImg($img);
     $this->setCategory($category);
+    $this->setColor($color);
   }
 
 
@@ -35,6 +39,9 @@ class Product
 
   public function setPrice($price)
   {
+    if ($price < 0) {
+      throw new Exception("Prezzo non può essere negativo");
+    }
     $this->price = $price;
   }
   public function getImg()

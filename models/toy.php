@@ -6,10 +6,10 @@ class Toy extends Product
   private $item;
   private $typology;
 
-  public function __construct($name, $price, $img, $icon, $item, $typology)
+  public function __construct($name, $price, $img, $icon, $item, $typology, $color)
   {
 
-    parent::__construct($name, $price, $img, $icon);
+    parent::__construct($name, $price, $img, $icon, $color);
 
     $this->item = $item;
     $this->typology = $typology;
