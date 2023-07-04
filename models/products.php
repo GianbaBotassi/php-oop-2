@@ -6,15 +6,15 @@ class Product
   private $name;
   private $price;
   private $img;
-  private $icon;
+  private Category $category;
 
-  public function __construct($name, $price, $img, Category $icon)
+  public function __construct($name, $price, $img, Category $category)
   {
 
-    $this->name = $name;
-    $this->price = $price;
-    $this->img = $img;
-    $this->icon = $icon;
+    $this->setName($name);
+    $this->setPrice($price);
+    $this->setImg($img);
+    $this->setCategory($category);
   }
 
 
@@ -45,5 +45,14 @@ class Product
   public function setImg($img)
   {
     $this->img = $img;
+  }
+  public function getCategory()
+  {
+    return $this->category;
+  }
+
+  public function setCategory($category)
+  {
+    $this->category = $category;
   }
 }

@@ -3,11 +3,13 @@
 class Category
 {
 
+  private $category;
   private $icon;
 
-  public function __construct($icon)
+  public function __construct($category, $icon)
   {
-    $this->icon = $icon;
+    $this->setIcon($icon);
+    $this->setCategory($category);
   }
 
   public function getIcon()
@@ -18,5 +20,14 @@ class Category
   public function setIcon($icon)
   {
     $this->icon = $icon;
+  }
+  public function getCategory()
+  {
+    return $this->category;
+  }
+
+  public function setCategory($category)
+  {
+    $this->category = $category;
   }
 }
