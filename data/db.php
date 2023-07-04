@@ -19,12 +19,24 @@ $catsCategory = new Category("gatto", "<i class='fa-solid fa-cat'></i>");
 // Elenco prodotti
 try {
 
-  $products["dogs"]["food"] = new Food("Crocchettine", 22, "crocsDogs.jpg", $dogsCategory, "Cibo", 2022, "blu");
+  $products["food"][] = new Food("Crocche di Maki Buone", 22, "crocsDogs.jpg", $dogsCategory, "Cibo", 2022, "blu");
+  $products["food"][] = new Food("Crocche di Maki Buone", 22, "crocsDogs.jpg", $dogsCategory, "Cibo", 2022, "blu");
+  $products["food"][] = new Food("Crocche di Maki Buone", 22, "crocsDogs.jpg", $dogsCategory, "Cibo", 2022, "blu");
 } catch (Exception $e) {
   echo $e->getMessage();
 }
-$products["cats"]["food"] = new Food("Carne in scatola", 33, "crocsCats.jpg", $catsCategory, "Cibo", 2025, "nero");
-$products["dogs"]["toys"] = new Toy("Kong", 10, "toyDogs.jpg", $dogsCategory, "Giochi", "Kong", "rosso");
-$products["cats"]["toys"] = new Toy("Bastoncino", 5, "toyCats.jpg", $catsCategory, "Giochi", "Bastoncino", "multicolore");
-$products["dogs"]["bed"] = new Bed("Cuccia", 100, "cucciaDogs.jpg", $dogsCategory, "Cucce", "L", "grigio");
-$products["cats"]["bed"] = new Bed("Cuccia", 80, "cucciaCats.jpg", $catsCategory, "Cucce", "XS", "bianco");
+$products["food"][] = new Food("Carne in scatola", 33, "crocsCats.jpg", $catsCategory, "Cibo", 2025, "nero");
+$products["food"][] = new Food("Carne in scatola", 33, "crocsCats.jpg", $catsCategory, "Cibo", 2025, "nero");
+$products["food"][] = new Food("Carne in scatola", 33, "crocsCats.jpg", $catsCategory, "Cibo", 2025, "nero");
+$products["toys"][] = new Toy("Kong", 10, "toyDogs.jpg", $dogsCategory, "Giochi", "Kong", "rosso");
+$products["toys"][] = new Toy("Kong", 10, "toyDogs.jpg", $dogsCategory, "Giochi", "Kong", "rosso");
+$products["toys"][] = new Toy("Kong", 10, "toyDogs.jpg", $dogsCategory, "Giochi", "Kong", "rosso");
+$products["toys"][] = new Toy("Bastoncino", 5, "toyCats.jpg", $catsCategory, "Giochi", "Bastoncino", "multicolore");
+$products["toys"][] = new Toy("Bastoncino", 5, "toyCats.jpg", $catsCategory, "Giochi", "Bastoncino", "multicolore");
+$products["toys"][] = new Toy("Bastoncino", 5, "toyCats.jpg", $catsCategory, "Giochi", "Bastoncino", "multicolore");
+$products["bed"][] = new Bed("Cuccia super power di Maki", 100, "cucciaDogs.jpg", $dogsCategory, "Cucce", "L", "grigio");
+$products["bed"][] = new Bed("Cuccia super power di Maki", 100, "cucciaDogs.jpg", $dogsCategory, "Cucce", "L", "grigio");
+$products["bed"][] = new Bed("Cuccia super power di Maki", 100, "cucciaDogs.jpg", $dogsCategory, "Cucce", "L", "grigio");
+$products["bed"][] = new Bed("Cuccia di Utah", 80, "cucciaCats.jpg", $catsCategory, "Cucce", "XS", "bianco");
+$products["bed"][] = new Bed("Cuccia di Utah", 80, "cucciaCats.jpg", $catsCategory, "Cucce", "XS", "bianco");
+$products["bed"][] = new Bed("Cuccia di Utah", 80, "cucciaCats.jpg", $catsCategory, "Cucce", "XS", "bianco");

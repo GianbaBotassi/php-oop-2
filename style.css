@@ -8,8 +8,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  background-color: #f5f5f5;
   color: #333;
+  background: linear-gradient(135deg, #ffd3b6, #8fcfd1);
 }
 
 a {
@@ -25,11 +25,11 @@ a {
 h1,
 h2,
 h3 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   text-align: center;
   color: #009900;
@@ -37,11 +37,12 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-top: 10px;
 }
 
 .category-container {
@@ -57,6 +58,7 @@ h3 {
 .slot {
   flex: 0 0 33.33%;
   padding: 10px;
+  overflow: hidden;
 }
 
 .slot .category-icon {
@@ -73,6 +75,7 @@ h3 {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+  border-radius: 15px;
 }
 
 .slot .price {
